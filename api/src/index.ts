@@ -1,11 +1,13 @@
 import express, { Application } from "express";
 import cors, { CorsOptions } from "cors";
+import Routes from "./routes";
 import Database from "./db";
 
 export default class Server {
     constructor(app: Application) {
         this.config(app);
         this.syncDatabase();
+        new Routes(app);
     }
 
     private config(app: Application) {

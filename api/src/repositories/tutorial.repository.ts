@@ -1,4 +1,4 @@
-import Tutorial from "../model/tutorial.model";
+import Tutorial from "../models/tutorial.model";
 
 interface ITutorialRepository {
     save(tutorial: Tutorial): Promise<Tutorial>;
